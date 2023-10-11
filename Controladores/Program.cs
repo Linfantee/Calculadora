@@ -12,7 +12,7 @@ namespace Calculadora
             int OpcionSeleccionada;
             bool cerrarCalculadora = false;
             MenuInterfaz mi = new MenuImplementacion();
-
+            OperacionInterfaz op = new OperacionImplementacion();
 
             //Procedimiento
             while (!cerrarCalculadora)
@@ -25,18 +25,21 @@ namespace Calculadora
                 {
                        
                     case 1:
-                        mi.suma();
+                        op.suma();
                         break;
                     case 2:
-                        mi.resta();
+                        op.resta();
                         break;
                     case 3:
-                        mi.multiplicacion();    
+                        op.multiplicacion();    
                         break;
                     case 4:
-                        mi.division();  
+                        op.division();  
                         break;
-                   
+                    case 5:
+                        cerrarCalculadora = true;
+                        break;
+                
 
 
 
